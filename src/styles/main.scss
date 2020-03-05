@@ -89,6 +89,7 @@ body {
 
 .product-card {
   box-sizing: border-box;
+  position: relative;
   height: 403px;
   width: 200px;
   border: 1px solid #f3f3f3;
@@ -101,10 +102,26 @@ body {
   }
 
   &__image {
+    position: absolute;
     display: block;
+    left: calc(50% - 83px);
     width: 160px;
     height: 134px;
-    margin: 30px auto 45px;
+    padding: 3px;
+    margin: 30px 0 45px;
+    transition: width 1s, height 1s, margin 1s, left 1s, right 1s;
+
+    &:hover {
+      width: 192px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      height: 160px;
+      border: 3px solid #f3f3f3;
+      margin-top: 0;
+      padding: 0;
+    }
   }
 
   &__text {
@@ -112,7 +129,7 @@ body {
     font-size: 12px;
     line-height: 15px;
     width: 170px;
-    margin: 0 auto 5px;
+    margin: 209px auto 5px;
   }
 
   &__code {
